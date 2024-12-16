@@ -1,14 +1,24 @@
 <script setup lang="ts">
-import Landing from './components/Landing.vue'
+import Background from './components/Background.vue'
 </script>
 
 <template>
-  <Landing />
+  <div class="full-screen-container">
+    <Background />
+  </div>
+  <div class=" wfull h100 bg-accent">
+
+  </div>
 </template>
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
+/* Full-screen container that ensures the background fits the screen */
+.full-screen-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden; /* Prevent scrolling */
 }
 </style>
