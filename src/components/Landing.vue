@@ -4,13 +4,13 @@
 <template>
   <div class=" wscreen h90vh flex" >
         <div class="flex wfull ma">
-            <div class="flex w100% ma">
-               <div class="w1/2 flex">
-                    <img src="../assets/hero.png" class="wfull mta  mla" alt="">
+            <div class="flex w90% ma">
+               <div class="w55% flex">
+                    <img src="../assets/hero.png" class="w90% mta  mla" alt="">
                 </div>
-            <div class=" w1/2 flex" >
+            <div class=" w45% flex" >
                 <div class="mta mla" dir="rtl">
-                    <h2  class=" font-vip my5 text-6xl line-height-15 text-white">عـــش الـتــجـربـة <br> و إستمتع بالمغامرة</h2>
+                    <h2  class=" font-vip my4 text-4rem line-height-4.5rem text-white">عـــش الـتــجـربـة <br> و إستمتع بالمغامرة</h2>
                     <h3 class="m0 mb4 text-2xl font-cairo">
                         اكتشف تجربة IPTV الجزائرية المثالية مع  Fennec Plus<br> ابتداء من 500 دج/شهر فقط 
                     </h3>
