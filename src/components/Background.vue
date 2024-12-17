@@ -2,6 +2,7 @@
 import { onMounted, ref } from 'vue'
 import Landing from './Landing.vue'; 
 import Navbar from './Navbar.vue';
+import Footer from './Footer.vue';
 
 const partners1 = ref([
   './src/assets/movies/movie1.png',
@@ -56,7 +57,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="wscreen hscreen relative">
+  <div class="wscreen hscreen relative bg-black">
     <!-- Background overlay -->
     <!-- <div class="absolute inset-0 bg-black z-10"></div> -->
 
@@ -122,18 +123,20 @@ onMounted(() => {
 
     <!-- Add Content above the carousel -->
     <div class="absolute inset-0 z-30 flex justify-center items-center">
-        <div class="bg-black wfull hscreen opacity-70">
-        </div>
+      <div class="bg-black wfull hscreen opacity-70"></div>
     </div>
     <div class="absolute inset-0 z-30 flex w80% mxa justify-center items-center">
-        <!-- <div class="bg-black wfull hscreen opacity-70"> -->
-            <!-- <h2 class="text-white text-4xl">Your Content Here</h2> -->
-             <Navbar />
-             <Landing class="opacity-100  wfull"/>
-        <!-- </div> -->
+      <Navbar />
+      <Landing class="opacity-100 wfull" />
+    </div>
+
+    <!-- Footer Section: Fixed at the bottom with py-8 -->
+    <div class="absolute bottom-0 w-full    z-30 flex justify-center items-center">
+      <Footer />
     </div>
   </div>
 </template>
+
 
 <style scoped>
 .partner-carousel-container {

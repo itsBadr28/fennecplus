@@ -1,13 +1,15 @@
 <script setup lang="ts">
 import Background from './components/Background.vue'
+import Footer from './components/Footer.vue' 
 </script>
 
 <template>
   <div class="full-screen-container">
     <Background />
   </div>
-  <div class=" wfull h100 bg-accent">
 
+  <div class="w-full h-full bg-accent">
+    <!-- Ton contenu ici -->
   </div>
 </template>
 
