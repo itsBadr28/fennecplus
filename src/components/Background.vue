@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
 import Landing from './Landing.vue'; 
+import Navbar from './Navbar.vue';
 
 const partners1 = ref([
   './src/assets/movies/movie1.png',
@@ -127,6 +128,7 @@ onMounted(() => {
     <div class="absolute inset-0 z-30 flex w80% mxa justify-center items-center">
         <!-- <div class="bg-black wfull hscreen opacity-70"> -->
             <!-- <h2 class="text-white text-4xl">Your Content Here</h2> -->
+             <Navbar />
              <Landing class="opacity-100  wfull"/>
         <!-- </div> -->
     </div>
