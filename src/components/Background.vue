@@ -3,7 +3,7 @@ import { onMounted, ref } from 'vue'
 import Landing from './Landing.vue'; 
 import Navbar from './Navbar.vue';
 import Footer from './Footer.vue';
-
+import Sections from './Sections.vue';
 const partners1 = ref([
   './src/assets/movies/movie1.png',
   './src/assets/movies/movie2.png',
@@ -133,6 +133,9 @@ onMounted(() => {
     <!-- Footer Section: Fixed at the bottom with py-8 -->
     <div class="absolute bottom-0 w-full    z-30 flex justify-center items-center">
       <Footer />
+    </div>
+    <div>
+      <Sections/>
     </div>
   </div>
 </template>

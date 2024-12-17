@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import Background from './components/Background.vue'
-import Footer from './components/Footer.vue' 
+import Footer from './components/Footer.vue'
+import Sections from './components/Sections.vue'; 
+
 </script>
 
 <template>
@@ -11,6 +13,9 @@ import Footer from './components/Footer.vue'
   <div class="w-full h-full bg-accent">
     <!-- Ton contenu ici -->
   </div>
+  <div >
+      <Sections />
+    </div>
 </template>
 
 <style>
