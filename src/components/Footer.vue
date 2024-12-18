@@ -1,3 +1,6 @@
+<script setup lang="ts">
+
+</script>
 <template>
   <footer class="relative  w-[80%] py-8 mx-auto rounded-lg bg-gradient-to-r from-[#56970B] via-[#B2FF58] to-[#56970B]">
     <!-- Text above the footer with absolute positioning -->

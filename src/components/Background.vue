@@ -58,11 +58,7 @@ onMounted(() => {
 
 <template>
   <div class="wscreen hscreen relative bg-black">
-    <!-- Background overlay -->
-    <!-- <div class="absolute inset-0 bg-black z-10"></div> -->
-
-    <!-- First Carousel -->
-    <div class="partner-carousel-container w-full overflow-hidden relative z-20">
+     <div class="partner-carousel-container w-full overflow-hidden relative z-20">
       <div class="partner-carousel-track flex">
         <div class="partner-slide flex animate-slide-right">
           <template v-for="partner in partners1" :key="partner">
@@ -81,7 +77,6 @@ onMounted(() => {
       </div>
     </div>
 
-    <!-- Second Carousel -->
     <div class="partner-carousel-container w-full overflow-hidden relative z-20">
       <div class="partner-carousel-track flex">
         <div class="partner-slide flex animate-slide-left">
@@ -101,7 +96,6 @@ onMounted(() => {
       </div>
     </div>
 
-    <!-- Third Carousel -->
     <div class="partner-carousel-container w-full overflow-hidden relative z-20">
       <div class="partner-carousel-track flex">
         <div class="partner-slide flex animate-slide-right">
@@ -121,18 +115,18 @@ onMounted(() => {
       </div>
     </div>
 
-    <!-- Add Content above the carousel -->
     <div class="absolute inset-0 z-30 flex justify-center items-center">
       <div class="bg-black wfull hscreen opacity-70"></div>
     </div>
     <div class="absolute inset-0 z-30 flex w80% mxa justify-center items-center">
       <Navbar />
-      <Landing class="opacity-100 wfull" />
+      <Landing class="-mt-46" />
     </div>
 
     <!-- Footer Section: Fixed at the bottom with py-8 -->
     <div class="absolute bottom-0 w-full    z-30 flex justify-center items-center">
       <Footer />
+
     </div>
   </div>
 </template>

@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import Background from './components/Background.vue'
-import Footer from './components/Footer.vue' 
 </script>
 
 <template>
