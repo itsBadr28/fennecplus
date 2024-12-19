@@ -3,7 +3,6 @@ import Background from './components/Background.vue'
 import Sections from './components/Sections.vue'; 
 import Cards from './components/Cards.vue';
 import Video from './components/Video.vue';
-
 </script>
 
 <template>
