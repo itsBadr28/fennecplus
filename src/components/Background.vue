@@ -33,7 +33,6 @@ onMounted(() => {
       <div class="partner-carousel-container w-full overflow-hidden relative z-20">
         <div class="partner-carousel-track flex">
           <div class="partner-slide flex animate-slide-right">
-            <!-- v-for="partner in partners1" :key="partner" -->
             <template v-for="partner in 2">
               <img
                 src="../assets/movie1.png"
@@ -65,12 +64,6 @@ onMounted(() => {
                 class="w-60 object-contain mx1 shrink-0"
               />
             </template>
-            <!-- <template v-for="partner in partners1" :key="partner">
-              <img
-                :src="partner"
-                class="w-60 object-contain mx1 shrink-0"
-              />
-            </template> -->
           </div>
         </div>
       </div>
@@ -157,11 +150,8 @@ onMounted(() => {
       <Navbar />
       <Landing class="-mt-46" />
     </div>
-
-    <!-- Footer Section: Fixed at the bottom with py-8 -->
     <div class="absolute bottom-0 w-full  z-30 flex justify-center items-center">
       <Footer />
-
     </div>
   </div>
 </template>
@@ -179,9 +169,9 @@ onMounted(() => {
 }
 
 .bg {
-        width: 100%; /* Make it take full width */
-        height: 100%; /* Make it take full height */
-        transform: rotate(-5deg); /* Slight tilt with rotation */
-        transform-origin: center; /* Make sure the rotation happens from the center */
+        width: 100%;
+        height: 100%;
+        transform: rotate(-5deg);
+        transform-origin: center;
 }
 </style>
