@@ -128,6 +128,9 @@ onMounted(() => {
       <Footer />
 
     </div>
+    <!-- <div>
+      <Sections/>
+    </div> -->
   </div>
 </template>
 
@@ -142,4 +145,4 @@ onMounted(() => {
 .partner-carousel-track {
   display: flex;
 }
-</style>
+</style>  

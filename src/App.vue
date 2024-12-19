@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import Background from './components/Background.vue'
+import Sections from './components/Sections.vue'; 
+import Cards from './components/Cards.vue';
+import Video from './components/Video.vue';
 </script>
 
 <template>
@@ -8,18 +11,27 @@ import Background from './components/Background.vue'
   </div>
 
   <div class="w-full h-full bg-accent">
-    <!-- Ton contenu ici -->
+    
   </div>
+  <div >
+      <Sections />
+    </div>
+    <div>
+      <Cards />
+    </div>
+    <div>
+      <Video />
+    </div>
 </template>
 
 <style>
-/* Full-screen container that ensures the background fits the screen */
+
 .full-screen-container {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100vw;
   height: 100vh;
-  overflow: hidden; /* Prevent scrolling */
+  overflow: hidden;
 }
-</style>
+</style>  
