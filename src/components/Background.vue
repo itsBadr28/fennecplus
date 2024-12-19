@@ -153,6 +153,9 @@ onMounted(() => {
     <div class="absolute bottom-0 w-full  z-30 flex justify-center items-center">
       <Footer />
     </div>
+    <!-- <div>
+      <Sections/>
+    </div> -->
   </div>
 </template>
 
