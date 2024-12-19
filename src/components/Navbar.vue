@@ -24,8 +24,7 @@
         </ul>
         <!-- Button with brighter and shinier shadow -->
         <div class="sx:flex hidden ">
-          <button
-            class="bg-#96c834 ml8 border-0 font-lemon text-black md:px-6 px4 py-2 md:text-lg text-sm rounded-lg font-extrabold shadow-[0_0_15px_5px_rgb(173,255,47)] hover:shadow-[0_0_25px_10px_rgb(173,255,47)] hover:scale-110 transition-all duration-300">
+          <button class="bg-#96c834 ml8 border-0 font-lemon text-black md:px-6 px4 py-2 md:text-lg text-sm rounded-lg font-extrabold shadow-[0_0_15px_5px_rgb(173,255,47)] hover:shadow-[0_0_25px_10px_rgb(173,255,47)] hover:scale-110 transition-all duration-300">
             Get Now
           </button>
         </div>
