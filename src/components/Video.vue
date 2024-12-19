@@ -1,10 +1,10 @@
 <template>
-    <div class="video-container">
-      <div class="title-container">
-        <p class="title">كيفاه نفعل التطبيق</p>
-      </div>
-  
+    <div class="video-container md:hscreen h80vh">
+      <!-- <div class="title-container">
+      </div> -->
+      
       <div class="video-wrapper">
+        <p class="md:text-6xl text-4xl font-vip">كيفاه نفعل التطبيق؟</p>
         <div class="video-cart">
           <video class="video" controls>
             <source src="" type="video/mp4" />
@@ -13,7 +13,7 @@
         </div>
         
         <button class="btn-guide">
-          <span class="shadow-text">شوف دليل الاستعمال</span>
+          <span class="shadow-text md:text-4xl text-2xl">شوف دليل الاستعمال</span>
         </button>
       </div>
     </div>
@@ -23,7 +23,7 @@
   .video-container {
     background-color: rgb(10, 0, 0);
     color: white;
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -33,7 +33,6 @@
   
   .title-container {
     text-align: center;
-    margin-bottom: 30px;
   }
   
   .title {
@@ -47,14 +46,14 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    padding: 20px;
+    /* padding: 20px; */
     box-sizing: border-box;
   }
   
   .video-cart {
     border: 5px solid #11b9b1;
     border-radius: 10px;
-    width: 50%;
+    width: 70%;
     margin-bottom: 20px;
   }
   
@@ -72,20 +71,17 @@
   .btn-guide {
     background: linear-gradient(to right, #56970B, #B2FF58, #56970B);
     color: white;
-    padding: 25px 50px;
-    font-size: 2rem;
-    font-weight: 1000;
+    padding: 20px 50px;
+    /* font-size: 2rem; */
+    /* font-weight: 1000; */
     font-family: "vip", sans-serif;
     border: none;
-    border-radius: 10px;
+    border-radius: 4px;
     cursor: pointer;
-    width: 40%;
+    width: 50%;
     transition: background-color 0.3s ease;
   }
   
-  .btn-guide:hover {
-    background: linear-gradient(to right, #B2FF58, #56970B, #B2FF58);
-  }
   
   .shadow-text {
     text-shadow: 3px 3px 5px rgba(128, 128, 128, 0.7);

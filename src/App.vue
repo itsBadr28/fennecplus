@@ -3,6 +3,8 @@ import Background from './components/Background.vue'
 import Sections from './components/Sections.vue'; 
 import Cards from './components/Cards.vue';
 import Video from './components/Video.vue';
+import Question from './components/Question.vue';
+import Contact from './components/Contact.vue';
 </script>
 
 <template>
@@ -10,18 +12,13 @@ import Video from './components/Video.vue';
     <Background />
   </div>
 
-  <div class="w-full h-full bg-accent">
-    
+  <div class="w-screen h-full ">
+    <Sections /> 
+    <Cards />
+    <Video />
+    <Question />
+    <Contact />
   </div>
-  <div >
-      <Sections />
-    </div>
-    <div>
-      <Cards />
-    </div>
-    <div>
-      <Video />
-    </div>
 </template>
 
 <style>

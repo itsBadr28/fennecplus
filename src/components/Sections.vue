@@ -1,34 +1,34 @@
 <template>
   <div
     ref="section"
-    class="flex items-center justify-center w-full min-h-[50vh] p-4 bg-black text-white">
+    class="flex items-center justify-center w-full min-h-[50vh] bg-black text-white">
     <div class="card w-full max-w-6xl mt-0">
-      <div class="flex flex-row gap-4 mt-10 w-full">
-        <div class="flex flex-col items-center w-full section">
-          <div class="text-5xl font-black">{{ counter1 }}+</div>
-          <div class="text-5xl font-black text-gray-400 section-text">
+      <div class="flex md:flex-row flex-col gap-4 mt-10 w-full">
+        <div class="flex flex-col md:my0 my4 items-center w-full section">
+          <div class="md:text-5xl text-4xl font-black">{{ counter1 }}+</div>
+          <div class="md:text-5xl text-4xl font-black text-gray-400 section-text">
             قناة
           </div>
         </div>
-        <div class="flex flex-col items-center w-full section">
-          <div class="text-5xl font-black">{{ counter2 }}+</div>
-          <div class="text-5xl font-black text-gray-400 section-text">
+        <div class="flex flex-col md:my0 my4 items-center w-full section">
+          <div class="md:text-5xl text-4xl font-black">{{ counter2 }}+</div>
+          <div class="md:text-5xl text-4xl font-black text-gray-400 section-text">
             مسلسل
           </div>
         </div>
-        <div class="flex flex-col items-center w-full section">
-          <div class="text-5xl font-black">{{ counter3 }}+</div>
-          <div class="text-5xl font-black text-gray-400 section-text">
+        <div class="flex flex-col md:my0 my4 items-center w-full section">
+          <div class="md:text-5xl text-4xl font-black">{{ counter3 }}+</div>
+          <div class="md:text-5xl text-4xl font-black text-gray-400 section-text">
             أفلام
           </div>
         </div>
       </div>
-      <div class="flex flex-row gap-10 mt-20 w-full">
-        <div class="flex flex-col items-center w-full section">
-          <div class="text-5xl font-black section-text">WEB PLAYER</div>
+      <div class="flex md:flex-row  flex-col gap-10 mt-20 w-full">
+        <div class="flex flex-col md:my0 my4 items-center w-full section">
+          <div class="md:text-5xl text-4xl font-black section-text">WEB PLAYER</div>
         </div>
         <div class="flex items-center justify-center w-full section text-5xl font-black whitespace-nowrap">
-          <div class="text-5xl font-black section-text">التفعيل عن بعد</div>
+          <div class="md:text-5xl text-4xl font-black md:my0 my4 section-text">التفعيل عن بعد</div>
         </div>
       </div>
     </div>
