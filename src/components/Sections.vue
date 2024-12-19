@@ -1,78 +1,156 @@
 <template>
-    <div class="flex items-center justify-center w-full h-screen p-4">
-      <div class="card w-full max-w-6xl mt-0"> <!-- Increased max-width moderately -->
-        <!-- Première grande div avec 3 divs horizontaux -->
-        <div class="flex flex-row gap-12 w-full">
-          <!-- Premier div horizontal -->
-          <div class="flex flex-col items-center w-full section">
-            <div class="text-4xl font-bold">+700</div> <!-- Slightly bigger font -->
-            <div class="text-xl">قناة</div> <!-- Slightly bigger font -->
-          </div>
-          <!-- Deuxième div horizontal -->
-          <div class="flex flex-col items-center w-full section">
-            <div class="text-4xl font-bold">+4000</div> <!-- Slightly bigger font -->
-            <div class="text-xl">مسلسل</div> <!-- Slightly bigger font -->
-          </div>
-          <!-- Troisième div horizontal -->
-          <div class="flex flex-col items-center w-full section">
-            <div class="text-4xl font-bold">+15000</div> <!-- Slightly bigger font -->
-            <div class="text-xl">أفلام</div> <!-- Slightly bigger font -->
+  <div
+    ref="section"
+    class="flex items-center justify-center w-full min-h-[50vh] p-4 bg-black text-white">
+    <div class="card w-full max-w-6xl mt-0">
+      <div class="flex flex-row gap-4 mt-10 w-full">
+        <div class="flex flex-col items-center w-full section">
+          <div class="text-5xl font-black">{{ counter1 }}+</div>
+          <div class="text-5xl font-black text-gray-400 section-text">
+            قناة
           </div>
         </div>
-      
-        <!-- Deuxième grande div avec 2 divs horizontaux -->
-        <div class="flex gap-12 mt-10 w-full">
-          <!-- Premier div horizontal à gauche -->
-          <div class="flex flex-col items-center w-full section">
-            <div class="text-4xl font-bold">WEB PLAYER</div> <!-- Slightly bigger font -->
+        <div class="flex flex-col items-center w-full section">
+          <div class="text-5xl font-black">{{ counter2 }}+</div>
+          <div class="text-5xl font-black text-gray-400 section-text">
+            مسلسل
           </div>
-          <!-- Deuxième div horizontal à droite -->
-          <div class="flex flex-col items-center w-full section">
-            <div class="text-4xl font-bold">التفعيل عن بعد</div> <!-- Slightly bigger font -->
+        </div>
+        <div class="flex flex-col items-center w-full section">
+          <div class="text-5xl font-black">{{ counter3 }}+</div>
+          <div class="text-5xl font-black text-gray-400 section-text">
+            أفلام
           </div>
         </div>
       </div>
+      <div class="flex flex-row gap-10 mt-20 w-full">
+        <div class="flex flex-col items-center w-full section">
+          <div class="text-5xl font-black section-text">WEB PLAYER</div>
+        </div>
+        <div class="flex items-center justify-center w-full section text-5xl font-black whitespace-nowrap">
+          <div class="text-5xl font-black section-text">التفعيل عن بعد</div>
+        </div>
+      </div>
     </div>
-  </template>
-  
-  <script>
-  export default {
-    name: 'Sections',
-  };
-  </script>
-  
-  <style scoped>
-  /* Custom CSS for the card border color */
-  .card {
-    border: 8px solid #56970B; /* Thicker green border for the card */
-    padding: 48px; /* Increased padding inside the card */
-    border-radius: 20px; /* Rounded corners for the card */
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); /* Optional: adds shadow to the card */
-    width: 100%;
-    height: auto; /* Automatically adjust the height based on content */
-  }
-  
-  /* Optional: you can color the borders inside each section separately */
-  .section {
-    position: relative;
-    text-align: center; /* Ensures the text is centered */
-  }
-  
-  .section::after {
-    content: '';
-    position: absolute;
-    bottom: -12px; /* Adjusts the vertical positioning */
-    left: 50%;
-    transform: translateX(-50%); /* Centers the line horizontally */
-    width: 60%; /* Adjusts the width to match the text length */
-    height: 8px; /* Thicker green line */
-    background-color: #56970B; /* Green color */
-    border-radius: 12px; /* Rounded corners for the line */
-  }
-  
-  /* Optional: Adjust margins and padding */
-  .section .text-lg {
-    margin-bottom: 12px; /* Space between the text and the border */
-  }
-  </style>
-  
+  </div>
+</template>
+
+<script>
+export default {
+  name: "Sections",
+  data() {
+    return {
+      counter1: 0,
+      counter2: 0,
+      counter3: 0,
+      countersStarted: false,
+    };
+  },
+  methods: {
+    animateCounters() {
+      const interval = 30;
+      const step1 = Math.ceil(7000 / 100);
+      const step2 = Math.ceil(4000 / 100);
+      const step3 = Math.ceil(15000 / 100);
+
+      const timer = setInterval(() => {
+        if (this.counter1 < 7000) this.counter1 += step1;
+        if (this.counter2 < 4000) this.counter2 += step2;
+        if (this.counter3 < 15000) this.counter3 += step3;
+
+        if (
+          this.counter1 >= 7000 &&
+          this.counter2 >= 4000 &&
+          this.counter3 >= 15000
+        ) {
+          clearInterval(timer);
+        }
+      }, interval);
+    },
+    revealCounters() {
+      if (!this.countersStarted) {
+        this.countersStarted = true;
+        this.animateCounters();
+      }
+    },
+    onScroll() {
+      const section = this.$refs.section;
+      const sectionTop = section.getBoundingClientRect().top;
+      const sectionBottom = section.getBoundingClientRect().bottom;
+
+      if (sectionTop < window.innerHeight && sectionBottom > 0) {
+        this.revealCounters();
+      }
+    },
+  },
+  mounted() {
+    window.addEventListener("scroll", this.onScroll);
+  },
+  beforeDestroy() {
+    window.removeEventListener("scroll", this.onScroll);
+  },
+};
+</script>
+
+<style scoped>
+.card {
+  border: 8px solid #b4e42f;
+  padding: 24px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  width: 45%;
+  min-height: 300px;
+  background-color: #000;
+  border-radius: 1%;
+  font-family: "vip", sans-serif;
+}
+
+.section {
+  position: relative;
+  text-align: center;
+  line-height: 1;
+}
+
+.section-text {
+  position: relative;
+  font-family: "vip", sans-serif;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.section-text::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background-color: #b4e42f;
+  border-radius: 12px;
+}
+
+.text-5xl {
+  font-size: 3rem;
+  font-family: "vip", sans-serif;
+  line-height: 1;
+}
+
+.text-gray-400 {
+  color: #a3a3a3;
+}
+
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.whitespace-nowrap {
+  white-space: nowrap;
+}
+</style>
