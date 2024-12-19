@@ -6,7 +6,7 @@ import Video from './components/Video.vue';
 </script>
 
 <template>
-  <div class="full-screen-container">
+  <div class="flex justify-center items-center wscreen hscreen overflow-hidden">
     <Background />
   </div>
 

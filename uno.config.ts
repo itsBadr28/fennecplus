@@ -19,9 +19,10 @@ export function createConfig({ strict = true, dev = true } = {}) {
         lemon: ['"lemon"', 'sans-serif'],
       },
       breakpoints: {
-        sm: '320px',
-        md: '912px',
-        lg: '1360px',
+        sx: '430px',
+        sm: '835px',
+        md: '1024px',
+        lg: '1281px',
       },
       colors: {
         main: '#505443',
